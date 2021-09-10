@@ -20,7 +20,9 @@ CREATE TABLE Usuario (
 GO
 
 
-/* PROCEDIMIENTO ALMACENADO QUE RECIBE MÚLTIPLES PARÁMETROS*/
+/* PROCEDIMIENTO ALMACENADO QUE RECIBE MÚLTIPLES PARÁMETROS (no se utiliza en el programa),
+
+el segundo procedimiento, CRUD_Usuario2, recibe únicamente un parámetro y es el que utiliza el sistema*/
 
 --DROP PROCEDURE CRUD_Usuario 
 GO
@@ -86,6 +88,13 @@ GO
 EXEC CRUD_Usuario 'Ver todos',null,null,null,null
 GO
 
+/*
+	FUNCIÓN Separador SE UTILIZA PARA SEPARAR EL PARÁMETRO ENVIADO A CRUD_Usuario2, 
+	Con esta función recorremos el string que envía el formulario, y separamos por comas cada palabra.
+
+	Este sistema es vulnerable a inyección de SQL.
+*/
+
 --drop function Separador
 go
 CREATE FUNCTION Separador (
@@ -133,6 +142,11 @@ GO
 
 SELECT * FROM separador('Ver todos,,,,')
 GO
+
+
+/* PROCEDIMIENTO CRUD_Usuario2 RECIBE UN SOLO PARÁMETRO 
+
+ESTE ES EL PROCEDIMIENTO QUE UTILIZA EL SISTEMA PARA SUS CONSULTAS*/
 
 
 
