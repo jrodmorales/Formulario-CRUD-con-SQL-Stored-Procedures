@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Test_BAM", "Test_BAM\Test_BAM.vbproj", "{EA12F0CB-D9B1-47C4-BA0B-AC7F9901E84E}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Test_BAM", "Test_BAM\Test_BAM.vbproj", "{EA12F0CB-D9B1-47C4-BA0B-AC7F9901E84E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EB52BDE3-9D65-4325-85AE-FDFC2122FE7D}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\SQL_TEST_BAM.sql = ..\..\..\Desktop\SQL_TEST_BAM.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
